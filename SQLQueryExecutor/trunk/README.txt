@@ -18,8 +18,11 @@ This is what the Apache Tomcat developers recommend.
 See the official documentation for additional details:
 http://tomcat.apache.org/tomcat-7.0-doc/jndi-datasource-examples-howto.html
 
+The Data Sources are configured in context.xml file in /META-INF folder. 
+Make the appropriate changes there to configure database access settings.
+
 In the project folder there is an Ant build file and the related properties file.
-Make the appropriate changes in the build.properties file.
+Make the appropriate changes in the build.properties file to configure Tomcat location etc.
 
 Also make the appropriate changes in log4j.properties file (found in /src folder)
 to configure the path to the log file.

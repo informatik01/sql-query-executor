@@ -20,8 +20,8 @@ import org.apache.log4j.Logger;
 import ee.ttu.queryexecutor.model.QueryData;
 
 /**
- * Implementation of the <tt>QueryStorageService</tt> interface that uses
- * JDBC and a database as a persistent storage.
+ * Implementation of the <tt>QueryStorageService</tt> interface
+ * that uses JDBC as a data access technology.
  * 
  * @see QueryStorageService
  *

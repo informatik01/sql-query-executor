@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoadXMLToDataSet", "LoadXMLToDataSet\LoadXMLToDataSet.csproj", "{90768B66-3DD1-4F65-9407-2B7030894288}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinForms_Client_for_JAX-WS", "WinForms_Client_for_JAX-WS\WinForms_Client_for_JAX-WS.csproj", "{3BF38FD8-A328-4D22-8BE0-44C1485C9149}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{90768B66-3DD1-4F65-9407-2B7030894288}.Debug|x86.ActiveCfg = Debug|x86
+		{90768B66-3DD1-4F65-9407-2B7030894288}.Debug|x86.Build.0 = Debug|x86
+		{90768B66-3DD1-4F65-9407-2B7030894288}.Release|x86.ActiveCfg = Release|x86
+		{90768B66-3DD1-4F65-9407-2B7030894288}.Release|x86.Build.0 = Release|x86
+		{3BF38FD8-A328-4D22-8BE0-44C1485C9149}.Debug|x86.ActiveCfg = Debug|x86
+		{3BF38FD8-A328-4D22-8BE0-44C1485C9149}.Debug|x86.Build.0 = Debug|x86
+		{3BF38FD8-A328-4D22-8BE0-44C1485C9149}.Release|x86.ActiveCfg = Release|x86
+		{3BF38FD8-A328-4D22-8BE0-44C1485C9149}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

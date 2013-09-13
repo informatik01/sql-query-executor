@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://ws.queryexecutor.ttu.ee/"
+           xmlns:tns="http://ws.queryexecutor.ttu.ee/"
+           version="1.0">
+  <xs:element name="executeQuery" type="tns:executeQuery" />
+  <xs:element name="executeQueryResponse" type="tns:executeQueryResponse" />
+  <xs:element name="table" type="tns:table" />
+  <xs:complexType name="executeQuery">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="query" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="executeQueryResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Table" type="tns:table" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="table">
+    <xs:sequence>
+      <xs:element name="ContentAvailable" type="xs:boolean" />
+      <xs:element minOccurs="0" name="InfoMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Columns" nillable="true">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="name" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="Rows" nillable="true">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="row" type="tns:row" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="row">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

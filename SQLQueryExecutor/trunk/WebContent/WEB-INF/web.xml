@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns="http://java.sun.com/xml/ns/javaee"
+		xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+		id="WebApp_ID"
+		version="3.0">
+		
+  <display-name>SQLQueryExecutor</display-name>
+  <description>This is a Java web application with JAX-WS web service</description>
+  
+  <!-- ========================= JAX-WS configurations ========================= -->
+  <!-- Using JAX-WS RI from the project Metro (http://jax-ws.java.net/) -->
+  <listener>
+    <listener-class>com.sun.xml.ws.transport.http.servlet.WSServletContextListener</listener-class>
+  </listener>
+  
+  <servlet>
+    <description>JAX-WS endpoint - SQLQueryExecutor</description>
+    <display-name>SQLQueryExecutor</display-name>
+    <servlet-name>WS Servlet</servlet-name>
+    <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WS Servlet</servlet-name>
+    <url-pattern>/services/*</url-pattern>
+  </servlet-mapping>
+  <!-- ========================= end of JAX-WS configurations ================== -->
+  
+  
+  <!-- ========================= JavaServer Faces configurations =============== -->
+  <!--  Using Oracle's JSF 2.2 implementation
+  		from the project Mojarra (http://javaserverfaces.java.net/) -->
+  <context-param>
+  	<param-name>javax.faces.PROJECT_STAGE</param-name>
+  	<param-value>Development</param-value>
+  </context-param>
+  <context-param>
+    <param-name>javax.faces.STATE_SAVING_METHOD</param-name>
+    <param-value>client</param-value>
+  </context-param>
+  <context-param>
+    <param-name>javax.servlet.jsp.jstl.fmt.localizationContext</param-name>
+    <param-value>resources.application</param-value>
+  </context-param>
+  
+  <listener>
+    <listener-class>com.sun.faces.config.ConfigureListener</listener-class>
+  </listener>
+  
+  <servlet>
+    <servlet-name>Faces Servlet</servlet-name>
+    <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Faces Servlet</servlet-name>
+    <url-pattern>*.xhtml</url-pattern>
+  </servlet-mapping>
+  <!-- ========================= end of JavaServer Faces configurations ======== -->
+  
+  
+  <!-- ========================= Data Source configurations ==================== -->
+  <resource-ref>
+    <res-ref-name>jdbc/TestShopDB</res-ref-name>
+    <res-type>javax.sql.DataSource</res-type>
+    <res-auth>Container</res-auth>
+  </resource-ref>
+  
+  <resource-ref>
+    <res-ref-name>jdbc/TestShopAdminDB</res-ref-name>
+    <res-type>javax.sql.DataSource</res-type>
+    <res-auth>Container</res-auth>
+  </resource-ref>
+  <!-- ========================= end of Data Source configurations ============= -->
+  
+  <welcome-file-list>
+  	<welcome-file>redirect.jsp</welcome-file>
+  </welcome-file-list>
+  
+</web-app>

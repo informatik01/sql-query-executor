@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+					  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Listing recent SQL queries</title>
+	<h:outputStylesheet library="css" name="main.css" />
+</h:head>
+<h:body>
+	<h1>List of 10 recent SQL queries sent to SQLQueryExecutor web service</h1>
+	<h:dataTable var="queryData" value="#{queryStorageService.queries}"
+		styleClass="queries-table" headerClass="queries-table-header"
+		rowClasses="queries-table-row">
+		<h:column>
+			<f:facet name="header">#</f:facet>&nbsp;
+		</h:column>
+		<h:column>
+			<f:facet name="header">SQL Query</f:facet>
+			#{queryData.query}
+		</h:column>
+		<h:column>
+			<f:facet name="header">Received Time</f:facet>
+			#{queryData.time}
+		</h:column>
+	</h:dataTable>
+</h:body>
+</html>

@@ -1,4 +1,4 @@
-﻿using System;
+ using System;
 using System.Data;
 using System.Windows.Forms;
 using Webservice.Client.TestService;
@@ -101,7 +101,7 @@ namespace Webservice.Client
             dataGridViewResult.DataSource = resultTable;
 
             // Enabling resizing of columns, because the DataGridViewAutoSizeColumnMode.AllCells,
-            // that is set for the AutoSizeColumnsMode in DataGridView, does not allow manual resizinging.
+            // that is set for the AutoSizeColumnsMode in DataGridView, does not allow manual resizing.
             for (int i = 0; i < dataGridViewResult.Columns.Count; i++)
             {
                 int columnWidth = dataGridViewResult.Columns[i].Width;

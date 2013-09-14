@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           targetNamespace="http://ws.queryexecutor.ttu.ee/"
-           xmlns:tns="http://ws.queryexecutor.ttu.ee/"
-           version="1.0">
+<xs:schema xmlns:tns="http://ws.queryexecutor.ttu.ee/" targetNamespace="http://ws.queryexecutor.ttu.ee/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="executeQuery" type="tns:executeQuery" />
   <xs:element name="executeQueryResponse" type="tns:executeQueryResponse" />
-  <xs:element name="table" type="tns:table" />
+  <xs:element name="table" type="tns:Table" />
   <xs:complexType name="executeQuery">
     <xs:sequence>
       <xs:element minOccurs="0" name="query" type="xs:string" />
@@ -13,10 +10,10 @@
   </xs:complexType>
   <xs:complexType name="executeQueryResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" name="Table" type="tns:table" />
+      <xs:element minOccurs="0" name="Table" type="tns:Table" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="table">
+  <xs:complexType name="Table">
     <xs:sequence>
       <xs:element name="ContentAvailable" type="xs:boolean" />
       <xs:element minOccurs="0" name="InfoMessage" nillable="true" type="xs:string" />

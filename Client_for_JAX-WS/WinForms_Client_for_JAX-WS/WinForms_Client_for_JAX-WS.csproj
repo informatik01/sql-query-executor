@@ -107,7 +107,7 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\TestService\SQLQueryExecutorImplService1.wsdl" />
-    <None Include="Service References\TestService\Webservice.Client.TestService.table.datasource">
+    <None Include="Service References\TestService\Webservice.Client.TestService.Table1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
   </ItemGroup>

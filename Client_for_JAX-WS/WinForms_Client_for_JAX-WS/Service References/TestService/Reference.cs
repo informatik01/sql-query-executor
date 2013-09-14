@@ -29,7 +29,7 @@ namespace Webservice.Client.TestService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.queryexecutor.ttu.ee/")]
-    public partial class table : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class Table : object, System.ComponentModel.INotifyPropertyChanged {
         
         private bool contentAvailableField;
         
@@ -126,12 +126,12 @@ namespace Webservice.Client.TestService {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.queryexecutor.ttu.ee/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Webservice.Client.TestService.table Table;
+        public Webservice.Client.TestService.Table Table;
         
         public executeQueryResponse() {
         }
         
-        public executeQueryResponse(Webservice.Client.TestService.table Table) {
+        public executeQueryResponse(Webservice.Client.TestService.Table Table) {
             this.Table = Table;
         }
     }
@@ -168,7 +168,7 @@ namespace Webservice.Client.TestService {
             return base.Channel.executeQuery(request);
         }
         
-        public Webservice.Client.TestService.table executeQuery(string query) {
+        public Webservice.Client.TestService.Table executeQuery(string query) {
             Webservice.Client.TestService.executeQueryRequest inValue = new Webservice.Client.TestService.executeQueryRequest();
             inValue.query = query;
             Webservice.Client.TestService.executeQueryResponse retVal = ((Webservice.Client.TestService.SQLQueryExecutor)(this)).executeQuery(inValue);

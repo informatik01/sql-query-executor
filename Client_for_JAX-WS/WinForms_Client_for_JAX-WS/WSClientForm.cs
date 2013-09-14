@@ -51,7 +51,7 @@ namespace Webservice.Client
                 return;
             }
 
-            table table = null;
+            Table table = null;
             try
             {
                 table = testService.executeQuery(query);

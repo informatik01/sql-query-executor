@@ -13,7 +13,7 @@ import javax.xml.bind.annotation.XmlType;
  *
  */
 @XmlRootElement
-@XmlType(propOrder={"contentAvailable", "infoMessage", "columns", "rows"})
+@XmlType(name="Table", propOrder={"contentAvailable", "infoMessage", "columns", "rows"})
 public class Table {
 	
 	/*

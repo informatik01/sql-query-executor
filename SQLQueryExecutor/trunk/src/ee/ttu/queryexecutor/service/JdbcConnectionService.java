@@ -41,7 +41,7 @@ public class JdbcConnectionService {
 				rs.close();
 			} catch (SQLException e) {
 				System.err.println("Error closing ResultSet: " + e.getMessage());
-				e.printStackTrace();
+				logger.error(e);
 			}
 		}
 	}
@@ -52,7 +52,7 @@ public class JdbcConnectionService {
 				st.close();
 			} catch (SQLException e) {
 				System.err.println("Error closing Statement: " + e.getMessage());
-				e.printStackTrace();
+				logger.error(e);
 			}
 		}
 	}
@@ -63,7 +63,7 @@ public class JdbcConnectionService {
 				con.close();
 			} catch (SQLException e) {
 				System.err.println("Error closing Connection: " + e.getMessage());
-				e.printStackTrace();
+				logger.error(e);
 			}
 		}
 	}
@@ -90,7 +90,7 @@ public class JdbcConnectionService {
 				con.rollback();
 			} catch (SQLException e) {
 				System.err.println("Error executing rollback on the connection.");
-				e.printStackTrace();
+				logger.error(e);
 			}
 		}
 	}
@@ -101,7 +101,7 @@ public class JdbcConnectionService {
 				con.setAutoCommit(autoCommit);
 			} catch (SQLException e) {
 				System.err.println("Error setting auto-commit mode.");
-				e.printStackTrace();
+				logger.error(e);
 			}
 		}
 	}

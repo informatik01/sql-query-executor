@@ -27,10 +27,6 @@
 				driverClassName="com.mysql.jdbc.Driver"
 				url="jdbc:mysql://localhost:3306/test_shop_admin"
 				username="root"
-				password="mysql"
-				maxActive="10"
-				minIdle="1"
-				removeAbandoned="true"
-				closeMethod="close"/>
+				password="mysql"/>
 				
 </Context>

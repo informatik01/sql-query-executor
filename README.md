@@ -1,5 +1,7 @@
-**NOTE**<br >
-*This project was made as part of an assignment.*
+**NOTE**<br />
+*This project was made as an assignment*
+
+---
 
 This project consist of two parts:
   1. Java web application with JAX-WS web service

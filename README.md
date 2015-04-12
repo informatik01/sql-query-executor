@@ -7,9 +7,9 @@ This project consist of two parts:
   1. Java web application with JAX-WS web service
   2. C# desktop GUI application, which acts as a client of the JAX-WS web service
 
-At the server side, there is a SOAP web service - SQLQueryExecutor, deployed on Apache Tomcat server. This web service receives SQL queries from its clients, executes them and sends back the resulting table. The communication with the web service is performed using SOAP protocol over HTTP. The appropriate WSDL file is available to the clients, so they can use it to access this web service. There is also a web page, that shows 10 most recent SQL queries along with the time those queries were received by the SQLQueryExecutor web service.
+At the <strong>server side</strong>, there is a SOAP web service - SQLQueryExecutor, deployed on Apache Tomcat server. This web service receives SQL queries from its clients, executes them and sends back the resulting table. The communication with the web service is performed using SOAP protocol over HTTP. The appropriate WSDL file is available to the clients, so they can use it to access this web service. There is also a web page, that shows 10 most recent SQL queries along with the time those queries were received by the SQLQueryExecutor web service.
 
-At the client side, there is a GUI desktop application, that allows users to send SQL queries for execution by the SQLQueryExecutor web service and shows the resulting table.
+At the <strong>client side</strong>, there is a GUI desktop application, that allows users to send SQL queries for execution by the SQLQueryExecutor web service and shows the resulting table.
 
 ###Implementation details
 The server side is written using Java platform.<br>

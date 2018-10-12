@@ -13,7 +13,7 @@ At the <strong>client side</strong>, there is a GUI desktop application, that al
 
 ###Implementation details
 The server side is written using Java platform.<br>
-The SQLQueryExecutor web service is implemented using [JAX-WS Reference Implementation](http://jax-ws.java.net/) version 2.2.8 from the project Metro.<br>
+The SQLQueryExecutor web service is implemented using [JAX-WS Reference Implementation](https://github.com/javaee/metro-jax-ws) version 2.2.8 from the project Metro.<br>
 The page that shows recent queries is written using Oracle's JSF 2.2 implementation from the project [Mojarra](http://javaserverfaces.java.net/).<br>
 As a servlet container this web application uses Apache Tomcat 7.<br>
 As a data storage this web application uses MySQL database (Community Edition). 
